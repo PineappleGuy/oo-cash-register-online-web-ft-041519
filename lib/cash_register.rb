@@ -19,9 +19,9 @@ class CashRegister
   end
 
   def apply_discount
-    @total_with_discount = @total - (@total * 0.2)
+    @total_with_discount = (@total - (@total * 0.2)).to_nearest_i
     if @discount > 0
-      "After the discount, the total comes to $#{@total_with_discount.to_nearest_i}"
+      "After the discount, the total comes to $#{@total_with_discount}"
     else
       "There is no discount to apply."
     end
