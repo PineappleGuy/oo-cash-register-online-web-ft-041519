@@ -25,7 +25,7 @@ class CashRegister
     else
       "There is no discount to apply."
     end
-    @total -= (@total * .2).to_int
+    @total -= (@total * 0.2).to_int
   end
 
   def items
